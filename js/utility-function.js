@@ -28,12 +28,23 @@ function getElementTotalOfValue(totalElementId) {
     const totalElementValue = parseInt(totalElementString);
     return totalElementValue;
 };
-//sub-total
+
+function setTextElementById(textElement, value) {
+    const subTotalElement = document.getElementById(textElement);
+    subTotalElement.innerText = value;
+}
 function calculateSubtotal() {
+    //calculate total
     const totalElementValueOfMobile = getElementTotalOfValue('balanceMobile');
     const totalElementValueOfCase = getElementTotalOfValue('balanceCase');
     const currentSubTotal = totalElementValueOfMobile + totalElementValueOfCase;
-    const subTotalElement = document.getElementById('sub-total');
-    subTotalElement.innerText = currentSubTotal;
+    setTextElementById('sub-total', currentSubTotal);
+    //calculate tax
+    const taxAmountString = (currentSubTotal * 0.1).toFixed(2);
+    const taxAmount = parseFloat(taxAmountString);
+    setTextElementById('tax-amout', taxAmount);
+    //final calculate
+    const finalAmount = currentSubTotal + taxAmount;
+    setTextElementById('final-total', finalAmount);
 };
 
