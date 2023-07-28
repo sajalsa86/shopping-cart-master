@@ -2,7 +2,7 @@
 document.getElementById('plusBtnMobile').addEventListener('click', function () {
 
     const newFieldNumber = updateFieldNumber('countMobile', true);
-    getElementTotalBalance(newFieldNumber, 1219, 'balanceMobile');
+    getElementTotalBalance(newFieldNumber, 1200, 'balanceMobile');
     calculateSubtotal();
 
 });
@@ -10,6 +10,10 @@ document.getElementById('plusBtnMobile').addEventListener('click', function () {
 document.getElementById('minusBtnMobile').addEventListener('click', function () {
 
     const newFieldNumber = updateFieldNumber('countMobile', false);
-    getElementTotalBalance(newFieldNumber, 1219, 'balanceMobile');
+    getElementTotalBalance(newFieldNumber, 1200, 'balanceMobile');
     calculateSubtotal();
+});
+
+document.getElementById('mobileItem').addEventListener('click', function () {
+    deleteCartItem('delete-first-item');
 });

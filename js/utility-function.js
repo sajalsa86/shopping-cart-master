@@ -37,7 +37,8 @@ function calculateSubtotal() {
     //calculate total
     const totalElementValueOfMobile = getElementTotalOfValue('balanceMobile');
     const totalElementValueOfCase = getElementTotalOfValue('balanceCase');
-    const currentSubTotal = totalElementValueOfMobile + totalElementValueOfCase;
+    const totalElementValueOfComputer = getElementTotalOfValue('balanceComputer');
+    const currentSubTotal = totalElementValueOfMobile + totalElementValueOfCase + totalElementValueOfComputer;
     setTextElementById('sub-total', currentSubTotal);
     //calculate tax
     const taxAmountString = (currentSubTotal * 0.1).toFixed(2);
@@ -47,4 +48,9 @@ function calculateSubtotal() {
     const finalAmount = currentSubTotal + taxAmount;
     setTextElementById('final-total', finalAmount);
 };
+
+function deleteCartItem(itemId) {
+    const deleteItem = document.getElementById(itemId);
+    deleteItem.style.display = 'none';
+}
 

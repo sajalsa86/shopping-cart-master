@@ -18,7 +18,7 @@
       <div class="container">
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
-               <div class="cart-item">
+               <div class="cart-item" id="delete-first-item">
                   <div class="row">
                      <div class="col-md-7 center-item">
                         <img src="images/product-1.png" alt="">
@@ -31,13 +31,13 @@
                            <input id="countMobile" type="text" class="form-control text-center" value="1">
                            <button id="plusBtnMobile" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$ <span id="balanceMobile">1219</span></h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <h5>$ <span id="balanceMobile">1200</span></h5>
+                        <img src="images/remove.png" alt="" class="remove-item" id="mobileItem">
                      </div>
                   </div>
                </div>
 
-               <div class="cart-item">
+               <div class="cart-item" id="delete-secound-item">
                   <div class="row">
                      <div class="col-md-7 center-item mx-auto">
                         <img src="images/product-2.png" alt="">
@@ -50,12 +50,31 @@
                            <button id="plusBtnCase" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$ <span id="balanceCase">59</span></h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <h5>$ <span id="balanceCase">60</span></h5>
+                        <img src="images/remove.png" alt="" class="remove-item" id="caseItem">
                      </div>
                   </div>
                </div>
+               <!-- ******************************************************************** -->
+               <div class="cart-item" id="delete-third-item">
+                  <div class="row">
+                     <div class="col-md-7 center-item mx-auto">
+                        <img src="images/computer.jpg" alt="">
+                        <h5>Computer core i3 Configaration- Black</h5>
+                     </div>
+                     <div class="col-md-5 center-item">
+                        <div class="input-group number-spinner">
+                           <button id="minusBtnComputer" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="countComputer" type="text" class="form-control text-center" value="1">
+                           <button id="plusBtnComputer" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
+                        </div>
+                        <h5>$ <span id="balanceComputer">5000</span></h5>
+                        <img src="images/remove.png" alt="" class="remove-item" id="computerItem">
+                     </div>
+                  </div>
+               </div>
+               <!-- ******************************************************************** -->
                <div class="cart-item">
                   <div class="row">
 
@@ -66,9 +85,9 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$<span id="sub-total">1,278</span></h5>
+                        <h5>$<span id="sub-total">0</span></h5>
                         <h5>$<span id="tax-amout">0</span></h5>
-                        <h5>$ <span id="final-total">1,278</span></h5>
+                        <h5>$ <span id="final-total">0</span></h5>
                      </div>
                   </div>
                </div>
@@ -85,6 +104,7 @@
    <script src="js/utility-function.js"></script>
    <script src="js/phone.js"></script>
    <script src="js/case.js"></script>
+   <script src="js/computer.js"></script>
 </body>
 
 </html>
